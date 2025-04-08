@@ -1,7 +1,7 @@
 class Items {
   final String title;
   final double price;
-  final imageurl;
+  final String imageurl;
 
   Items({required this.title, required this.price, required this.imageurl});
 }
@@ -9,31 +9,31 @@ class Items {
 List<Items> item = [
   Items(
     imageurl: 'assets/hotel/hotel_1.png',
-    price: 8.5,
-    title: 'Mauresque',
+    price: 180,
+    title: 'London',
     //isFavourite: true,
   ),
   Items(
-    title: 'Cocktail Horses Neck',
-    price: 12,
+    title: 'London',
+    price: 180,
     imageurl: 'assets/hotel/hotel_2.png',
     // isFavourite: true,
   ),
   Items(
-    title: 'Ramos Gin Fizz',
-    price: 7.0,
+    title: 'London',
+    price: 180,
     imageurl: 'assets/hotel/hotel_3.png',
     // isFavourite: true,
   ),
   Items(
-    title: 'Gin Lemon',
-    price: 5.0,
+    title: 'London',
+    price: 180,
     imageurl: 'assets/hotel/hotel_4.png',
     // isFavourite: false,
   ),
   Items(
-    title: 'Thai Coffee',
-    price: 7.0,
+    title: 'London',
+    price: 180,
     imageurl: 'assets/hotel/hotel_5.png',
     // isFavourite: false,
   ),

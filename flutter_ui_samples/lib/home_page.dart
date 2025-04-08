@@ -148,7 +148,10 @@ class HomePage extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Icon(Icons.tune, color: Color(0xFF56D4C5)),
+                          child: Icon(
+                            Icons.sort_sharp,
+                            color: Color(0xFF56D4C5),
+                          ),
                         ),
                       ],
                     ),
@@ -156,13 +159,12 @@ class HomePage extends StatelessWidget {
                       child: ListView.builder(
                         physics: AlwaysScrollableScrollPhysics(),
                         itemCount: item.length,
-                        itemBuilder: (context, index) {
-                          return Cards(
-                            title: 'hello',
-                            price: 100,
-                            location: 'hi',
-                          );
-                        },
+                        itemBuilder:
+                            (context, index) => Cards(item: item[index]),
+
+                        // title: 'hello',
+                        // price: 100,
+                        // location: 'hi',
                       ),
                     ),
                     // Flexible(

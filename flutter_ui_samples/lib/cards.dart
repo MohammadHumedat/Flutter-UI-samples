@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_application/items.dart';
 
 class Cards extends StatelessWidget {
-  final String title;
-  final double price;
-  final String location;
-  const Cards({
-    super.key,
-    required this.title,
-    required this.price,
-    required this.location,
-  });
+  final Items item;
+  const Cards({required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +28,7 @@ class Cards extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     image: DecorationImage(
-                      image: AssetImage('assets/hotel/hotel_1.png'),
+                      image: AssetImage(item.imageurl), 
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -70,6 +64,7 @@ class Cards extends StatelessWidget {
             ),
             Row(
               children: [
+                SizedBox(width: 10),
                 Text(
                   'Wembley, London',
                   style: TextStyle(fontWeight: FontWeight.w300, fontSize: 11),
@@ -81,7 +76,7 @@ class Cards extends StatelessWidget {
                   '2 km to city',
                   style: TextStyle(fontWeight: FontWeight.w300, fontSize: 11),
                 ),
-                SizedBox(width: 140),
+                SizedBox(width: 130),
                 Text(
                   '/per night',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
