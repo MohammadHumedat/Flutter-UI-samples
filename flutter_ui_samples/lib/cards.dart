@@ -28,7 +28,7 @@ class Cards extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     image: DecorationImage(
-                      image: AssetImage(item.imageurl), 
+                      image: AssetImage(item.imageurl),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -52,7 +52,11 @@ class Cards extends StatelessWidget {
                 children: [
                   Text(
                     'Grand Royal Hotel',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
 
                   Text(
@@ -67,7 +71,11 @@ class Cards extends StatelessWidget {
                 SizedBox(width: 10),
                 Text(
                   'Wembley, London',
-                  style: TextStyle(fontWeight: FontWeight.w300, fontSize: 11),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 11,
+                    fontFamily: 'Roboto',
+                  ),
                 ),
                 SizedBox(width: 8),
                 Icon(Icons.location_on, color: Color(0xFF56D4C5), size: 18),
