@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_application/cards.dart';
+import 'package:hotel_application/items.dart';
 
 class HomePage extends StatelessWidget {
-   HomePage({super.key});
+  HomePage({super.key});
 
-  final cards_list = ['1','2','3'];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-      
+
                     width: 300,
                     height: 50,
                     alignment: Alignment.center,
@@ -85,15 +85,17 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-              
                 Column(
                   children: [
                     Text(
                       'Choose date',
-                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.w100),
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w100,
+                      ),
                     ),
                     Text('12 Dec - 22 Dec', style: TextStyle(fontSize: 15)),
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                   ],
                 ),
                 SizedBox(height: 30, child: VerticalDivider()),
@@ -101,14 +103,15 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Numbers of Rooms',
-                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.w100),
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w100,
+                      ),
                     ),
                     Text('1 Room - 2 Adults', style: TextStyle(fontSize: 15)),
-                    SizedBox(height: 10,)
+                    SizedBox(height: 10),
                   ],
-                 
                 ),
-                
               ],
             ),
             Expanded(
@@ -122,7 +125,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(10.0),
-      
+
                           child: Text(
                             '530 hotels found',
                             style: TextStyle(
@@ -132,7 +135,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                         Spacer(),
-      
+
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Text(
@@ -149,15 +152,19 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                      Flexible(
-                        child: ListView.builder(
-                          physics: AlwaysScrollableScrollPhysics(),
-                          itemCount:cards_list.length,
-                         itemBuilder:(context,index){
-                              return Cards(title:'hello', price: 100, location: 'hi', );
-                         }
-                        ),
+                    Flexible(
+                      child: ListView.builder(
+                        physics: AlwaysScrollableScrollPhysics(),
+                        itemCount: item.length,
+                        itemBuilder: (context, index) {
+                          return Cards(
+                            title: 'hello',
+                            price: 100,
+                            location: 'hi',
+                          );
+                        },
                       ),
+                    ),
                     // Flexible(
                     //   child: ListView(
                     //     children: [
@@ -168,7 +175,7 @@ class HomePage extends StatelessWidget {
                     //             Container(
                     //               height: 150,
                     //               width: 330,
-      
+
                     //               decoration: BoxDecoration(
                     //                 borderRadius: BorderRadius.circular(20),
                     //                 color: Colors.grey,

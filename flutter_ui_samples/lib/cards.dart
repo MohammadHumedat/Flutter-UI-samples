@@ -34,9 +34,7 @@ class Cards extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     image: DecorationImage(
-                      image: NetworkImage(
-                        'https://hotelcard-files.ams3.cdn.digitaloceanspaces.com/pictures/hotel/2129/oberwaid-hotel-32135-1554390144-original.jpg',
-                      ),
+                      image: AssetImage('assets/hotel/hotel_1.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -83,7 +81,7 @@ class Cards extends StatelessWidget {
                   '2 km to city',
                   style: TextStyle(fontWeight: FontWeight.w300, fontSize: 11),
                 ),
-                SizedBox(width: 90),
+                SizedBox(width: 140),
                 Text(
                   '/per night',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
