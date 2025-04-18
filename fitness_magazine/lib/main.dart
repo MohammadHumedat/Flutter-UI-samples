@@ -1,5 +1,4 @@
-
-
+import 'package:fitness_magazine/gride_item.dart';
 import 'package:fitness_magazine/listview_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          elevation: 0, // This removes the shadow from all App Bars.
+          elevation: 0,
           scrolledUnderElevation: 0,
           backgroundColor: Color(0xFF364046),
         ),
@@ -57,89 +56,14 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Container(
-              color: Colors.white,
-              height: 350,
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
 
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Stack(
-                    children: [
-                      Container(
-                        height: 220,
-                        width: 350,
-                        alignment: Alignment.topCenter,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(18),
-                          image: DecorationImage(
-                            alignment: Alignment.topCenter,
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets/icons/png/placeholder.png',
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Icon(
-                            Icons.favorite_border,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: 80,
-                      height: 30,
-                      decoration: BoxDecoration(color: Color(0xFFfccd0a)),
-                      child: Center(
-                        child: Text(
-                          'لياقة',
-                          style: TextStyle(
-                            fontFamily: 'Somar',
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    child: Text(
-                      'تمارين الكارديو وحدها لا تساعد في فقدان الوزن',
-                      style: TextStyle(
-                        fontFamily: 'Somar',
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    child: Text(
-                      'تمارين الكارديو من أهم التمارين الرياضية التي تساعدك على الحصول على أكبر كمية من  الطاقة والحماس والتشويق',
-                      style: TextStyle(
-                        fontFamily: 'Somer',
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                      ),
-                      maxLines: 2,
-                      textAlign: TextAlign.end,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ],
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return GrideItem();
+                },
               ),
             ),
 
@@ -157,7 +81,7 @@ class HomePage extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 physics: BouncingScrollPhysics(),
-                children: [TabCard(), Text('صحة'), Text('Tab3'), Text('Tab4')],
+                children: [TabCard(), TabCard(), TabCard(), TabCard()],
               ),
             ),
           ],
@@ -166,4 +90,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

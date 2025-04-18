@@ -1,3 +1,4 @@
+import 'package:fitness_magazine/listview_square.dart';
 import 'package:flutter/material.dart';
 
 class TabCard extends StatelessWidget {
@@ -14,41 +15,7 @@ class TabCard extends StatelessWidget {
             top: 12,
             bottom: 12,
           ),
-          child: Container(
-            height: 100,
-            decoration: BoxDecoration(
-              color: Color(0xFFfccd0a),
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black26,
-                  spreadRadius: 2,
-                  blurRadius: 10,
-                  offset: Offset(0, 8),
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      width: 110,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage("assets/icons/png/placeholder.png"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          child: ListviewSquare(),
         ),
       ],
     );
