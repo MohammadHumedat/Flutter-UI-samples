@@ -1,5 +1,7 @@
 import 'package:fitness_magazine/gride_item.dart';
 import 'package:fitness_magazine/listview_tabbar.dart';
+import 'package:fitness_magazine/listview_tap_date.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -41,6 +43,7 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Center(
             child: Text(
@@ -56,11 +59,11 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Expanded(
+            Container(
+              height: 320,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-
-                itemCount: 4,
+                itemCount: 3,
                 itemBuilder: (context, index) {
                   return GrideItem();
                 },
@@ -69,19 +72,21 @@ class HomePage extends StatelessWidget {
 
             TabBar(
               tabs: [
-                Tab(
-                  icon: Icon(Icons.food_bank_rounded, size: 18),
-                  text: 'تغذية',
-                ),
-                Tab(icon: Icon(Icons.health_and_safety, size: 18), text: 'صحة'),
-                Tab(icon: Icon(Icons.girl_sharp, size: 18), text: 'جمال'),
-                Tab(icon: Icon(Icons.fitness_center, size: 18), text: 'لياقة'),
+                Tab(text: 'تغذية'),
+                Tab(text: 'صحة'),
+                Tab(text: 'جمال'),
+                Tab(text: 'لياقة'),
               ],
             ),
             Expanded(
               child: TabBarView(
                 physics: BouncingScrollPhysics(),
-                children: [TabCard(), TabCard(), TabCard(), TabCard()],
+                children: [
+                  TabCard(articles: nutrition),
+                  TabCard(articles: healthy),
+                  TabCard(articles: nutrition),
+                  TabCard(articles: nutrition),
+                ],
               ),
             ),
           ],
@@ -90,3 +95,5 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+//umsplash

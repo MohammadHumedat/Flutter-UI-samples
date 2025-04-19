@@ -1,14 +1,16 @@
+import 'package:fitness_magazine/listview_tap_date.dart';
 import 'package:flutter/material.dart';
 
 class ListviewSquare extends StatelessWidget {
-  const ListviewSquare({super.key});
+  final Article article;
+  const ListviewSquare({required this.article});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 110,
+      height: 90,
       decoration: BoxDecoration(
-        color: Color(0xFFfccd0a),
+        color: article.color,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
@@ -21,7 +23,6 @@ class ListviewSquare extends StatelessWidget {
       ),
       child: Row(
         children: [
-          
           Container(
             width: 110,
             height: 110,
@@ -31,36 +32,31 @@ class ListviewSquare extends StatelessWidget {
                 bottomRight: Radius.circular(10),
               ),
               image: DecorationImage(
-                image: NetworkImage(
-                  'https://th.bing.com/th/id/OIP.Hzk9_--egkrLKJ7ksIU72gHaEI?rs=1&pid=ImgDetMain',
-                ),
+                image: NetworkImage('${article.url}'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
 
-         
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
                   Expanded(
                     child: Text(
-                      "ما الذاكرة العضلية  .. وكيف تريدهاأشهر تمارين الإسترخاء , تساعد على بناء العضلات وتعزيز الراحة النفسية والجسدية يمكنك ممارستها في المنزل",
+                      '${article.info}',
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Somer',
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
 
-                 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
