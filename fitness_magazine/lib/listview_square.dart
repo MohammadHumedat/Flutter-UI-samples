@@ -46,11 +46,11 @@ class ListviewSquare extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      '${article.info}',
+                      '${article.content}',
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Somer',
-                        fontSize: 13,
+                        fontSize: 11,
                       ),
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,

@@ -1,4 +1,6 @@
+import 'package:fitness_magazine/article_card.dart';
 import 'package:fitness_magazine/gride_item.dart';
+import 'package:fitness_magazine/last_update_data.dart';
 import 'package:fitness_magazine/listview_tabbar.dart';
 import 'package:fitness_magazine/listview_tap_date.dart';
 import 'package:flutter/foundation.dart';
@@ -59,15 +61,18 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Container(
-              height: 320,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return GrideItem();
-                },
-              ),
+            GestureDetector(
+              
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => Placeholder(), 
+                  ),
+                );
+              },
+              child: mainSectionArticle(articles: mainSectionArticles),
             ),
 
             TabBar(
@@ -84,8 +89,8 @@ class HomePage extends StatelessWidget {
                 children: [
                   TabCard(articles: nutrition),
                   TabCard(articles: healthy),
-                  TabCard(articles: nutrition),
-                  TabCard(articles: nutrition),
+                  TabCard(articles: beauty),
+                  TabCard(articles: fitness),
                 ],
               ),
             ),

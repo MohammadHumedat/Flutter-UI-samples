@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fitness_magazine/listview_tap_date.dart';
+import 'package:fitness_magazine/last_update_data.dart';
 
 class GrideItem extends StatelessWidget {
-  const GrideItem({super.key});
+  final Article mainSectionArticles;
+  const GrideItem({required this.mainSectionArticles});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +30,7 @@ class GrideItem extends StatelessWidget {
                       image: DecorationImage(
                         alignment: Alignment.topCenter,
                         fit: BoxFit.cover,
-                        image: NetworkImage(
-                          'https://th.bing.com/th/id/OIP.Hzk9_--egkrLKJ7ksIU72gHaEI?rs=1&pid=ImgDetMain',
-                        ),
+                        image: NetworkImage('${mainSectionArticles.url}'),
                       ),
                     ),
                   ),
@@ -48,10 +49,10 @@ class GrideItem extends StatelessWidget {
               child: Container(
                 width: 80,
                 height: 30,
-                decoration: BoxDecoration(color: Color(0xFFfccd0a)),
+                decoration: BoxDecoration(color: mainSectionArticles.color),
                 child: Center(
                   child: Text(
-                    'لياقة',
+                    '${mainSectionArticles.category}',
                     style: TextStyle(
                       fontFamily: 'Somar',
                       color: Colors.white,
@@ -65,7 +66,7 @@ class GrideItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10, right: 10),
               child: Text(
-                'تمارين الكارديو وحدها لا تساعد في فقدان الوزن',
+                ' ${mainSectionArticles.title}',
                 style: TextStyle(
                   fontFamily: 'Somar',
                   fontSize: 16,
@@ -78,7 +79,7 @@ class GrideItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                'تمارين الكارديو من أهم التمارين الرياضية التي تساعدك على الحصول على أكبر كمية من  الطاقة والحماس والتشويق',
+                '${mainSectionArticles.content}',
                 style: TextStyle(
                   fontFamily: 'Somar',
                   fontSize: 15,

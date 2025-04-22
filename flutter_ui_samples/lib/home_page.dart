@@ -3,7 +3,7 @@ import 'package:hotel_application/cards.dart';
 import 'package:hotel_application/items.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

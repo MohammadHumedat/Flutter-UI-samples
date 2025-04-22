@@ -3,7 +3,7 @@ import 'package:hotel_application/items.dart';
 
 class Cards extends StatelessWidget {
   final Items item;
-  const Cards({required this.item});
+  const Cards({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
