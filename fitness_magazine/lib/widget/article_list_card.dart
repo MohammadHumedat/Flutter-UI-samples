@@ -1,9 +1,9 @@
-import 'package:fitness_magazine/listview_tap_date.dart';
+import 'package:fitness_magazine/model/article.dart';
 import 'package:flutter/material.dart';
 
-class ListviewSquare extends StatelessWidget {
+class ArticleListCard extends StatelessWidget {
   final Article article;
-  const ListviewSquare({required this.article});
+  const ArticleListCard({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {

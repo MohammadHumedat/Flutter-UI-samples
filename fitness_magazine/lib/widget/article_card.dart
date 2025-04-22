@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fitness_magazine/listview_tap_date.dart';
-import 'package:fitness_magazine/last_update_data.dart';
+import 'package:fitness_magazine/model/article.dart';
 
-class GrideItem extends StatelessWidget {
+
+class ArticleCard extends StatelessWidget {
   final Article mainSectionArticles;
-  const GrideItem({required this.mainSectionArticles});
+  const ArticleCard({super.key, required this.mainSectionArticles});
 
   @override
   Widget build(BuildContext context) {
