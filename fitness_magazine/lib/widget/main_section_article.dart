@@ -20,7 +20,10 @@ class MainSectionArticle extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AvocadoOilArticleScreen(),
+                  builder:
+                      (context) => AvocadoOilArticleScreen(
+                        articleContent: articles[index],
+                      ),
                 ),
               );
             },

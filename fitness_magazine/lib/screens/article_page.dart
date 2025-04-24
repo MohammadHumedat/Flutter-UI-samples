@@ -1,7 +1,9 @@
+import 'package:fitness_magazine/model/article.dart';
 import 'package:flutter/material.dart';
 
 class AvocadoOilArticleScreen extends StatelessWidget {
-  const AvocadoOilArticleScreen({super.key});
+  final Article articleContent;
+  const AvocadoOilArticleScreen({super.key, required this.articleContent});
 
   @override
   Widget build(BuildContext context) {
@@ -18,79 +20,145 @@ class AvocadoOilArticleScreen extends StatelessWidget {
         body: Column(
           children: [
             Stack(
+              clipBehavior: Clip.none,
               children: [
-                Image.network(
-                  'https://images.unsplash.com/photo-1557925922-dac32ff4429f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2b2NhZG98ZW58MHx8MHx8fDA%3D',
-                  width: double.infinity,
+                Container(
                   height: 250,
-                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage('${articleContent.url}'),
+                    ),
+                  ),
+                ),
+
+                Positioned(
+                  top: 220,
+                  left: 0,
+                  right: 0,
+                  // bottom: 0,
+                  child: Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(25),
+                        ),
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        physics: AlwaysScrollableScrollPhysics(),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              '${articleContent.title}',
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontFamily: 'Somar',
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(height: 15),
+                            Text(
+                              'المعلومة الأولى',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              '${articleContent.content}',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 25),
+                            Text(
+                              'المعلومة الثانية',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              '${articleContent.content}',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 25),
+                            Text(
+                              'المعلومة الثانية',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              '${articleContent.content}',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 25),
+                            Text(
+                              'المعلومة الثانية',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              '${articleContent.content}',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 25),
+                            Text(
+                              'المعلومة الثانية',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              '${articleContent.content}',
+                              style: TextStyle(
+                                fontFamily: 'Somar',
+                                fontSize: 17,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ],
-            ),
-
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
-                ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        "إليك 10 فوائد صحية لزيت الأفوكادو",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 20),
-
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          "جيد للقلب",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        "يحتوي زيت الأفوكادو على أحماض دهنية غير مشبعة..."
-                        " له خصائص مضادة للالتهابات، مما يساعد على منع تلف جدران الشرايين.",
-                        style: TextStyle(fontSize: 14, height: 1.7),
-                      ),
-
-                      SizedBox(height: 30),
-
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Text(
-                          "جيد للبشرة",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 10),
-                      Text(
-                        "يعتبر زيت الأفوكادو مصدرًا جيدًا لمضادات الأكسدة مثل بيتا كاروتين..."
-                        " مما يجعل بشرتك شابة.",
-                        style: TextStyle(fontSize: 14, height: 1.7),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ),
           ],
         ),
