@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_application/items.dart';
+import 'package:hotel_application/hotel_ui/items.dart';
 
 class Cards extends StatelessWidget {
   final Items item;

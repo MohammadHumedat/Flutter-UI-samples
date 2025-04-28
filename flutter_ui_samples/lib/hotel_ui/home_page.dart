@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_application/cards.dart';
-import 'package:hotel_application/items.dart';
+import 'package:hotel_application/hotel_ui/cards.dart';
+import 'package:hotel_application/hotel_ui/items.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
