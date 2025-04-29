@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:fitness_magazine/model/article.dart';
-
+import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ArticleCard extends StatelessWidget {
   final Article mainSectionArticles;
@@ -8,6 +8,7 @@ class ArticleCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // This the layout structure of main article, after you click on card.
     return Padding(
       padding: const EdgeInsets.only(left: 5, right: 5),
       child: Container(
@@ -97,3 +98,13 @@ class ArticleCard extends StatelessWidget {
     );
   }
 }
+
+// Hero(
+//                     tag: ('${mainSectionArticles.category}'),
+//                     child: CachedNetworkImage(
+//                       imageUrl: ('${mainSectionArticles.url}'),
+//                       width: double.infinity,
+//                       height: 150,
+//                       fit: BoxFit.cover,
+//                     ),
+//                   ),

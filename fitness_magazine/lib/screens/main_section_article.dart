@@ -9,6 +9,7 @@ class MainSectionArticle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //This ListView to build the main article cards that appers on the top of screens
     return Container(
       height: 320,
       child: ListView.builder(
@@ -22,6 +23,7 @@ class MainSectionArticle extends StatelessWidget {
                 MaterialPageRoute(
                   builder:
                       (context) => AvocadoOilArticleScreen(
+                        // return the full article after click on it, full article according to spicefic category.
                         articleContent: articles[index],
                       ),
                 ),

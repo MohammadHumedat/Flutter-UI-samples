@@ -21,10 +21,10 @@ List<Article> mainSectionArticles = [
     url:
         'https://media.istockphoto.com/id/1433432507/photo/healthy-eating-plate-with-vegan-or-vegetarian-food-in-woman-hands-healthy-plant-based-diet.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZpQFw7PDna9cCLKkrVxyGQPqlc1Hy-ZWMoweYf4j8mU=',
     content:
-        "ما الذاكرة العضلية  .. وكيف تريدهاأشهر تمارين الإسترخاء , تساعد على بناء العضلات وتعزيز الراحة النفسية والجسدية يمكنك ممارستها في  المنز",
+        "زيت الافكادو وفوائده الكبيرة على الجسم ",
     color: Color(0xFfB4cf66),
     category: 'تغذية',
-    title: 'تمارين الكارديو وحدها لا تساعد على بناء العضلات',
+    title: "إالبك 10 فوائد لزيت الافوكادو",
   ),
   Article(
     url:

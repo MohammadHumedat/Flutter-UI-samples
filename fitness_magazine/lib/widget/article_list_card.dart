@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 class ArticleListCard extends StatelessWidget {
   final Article article;
-  const ArticleListCard({super.key, required this.article});
+  const ArticleListCard({
+    super.key,
+    required this.article,
+  }); //This is the layout structure of the list cards that is in the bottom of page, the list using Tabview
 
   @override
   Widget build(BuildContext context) {
