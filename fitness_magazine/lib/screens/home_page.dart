@@ -1,5 +1,5 @@
-import 'package:fitness_magazine/widget/main_section_article.dart';
-import 'package:fitness_magazine/widget/vertical_article_list.dart';
+import 'package:fitness_magazine/screens/main_section_article.dart';
+import 'package:fitness_magazine/screens/vertical_article_list.dart';
 import 'package:fitness_magazine/model/article.dart';
 import 'package:flutter/material.dart';
 

@@ -1,12 +1,5 @@
-import 'package:fitness_magazine/screens/home_page.dart';
 import 'package:flutter/material.dart';
-
-
-
-
-
-
-
+import 'package:fitness_magazine/screens/home_page.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
@@ -35,11 +28,15 @@ class MyApp extends StatelessWidget {
         ),
       ),
       supportedLocales: appSupportedLocales,
-      home: HomePage(),//Go to home page.
+      home: HomePage(), //Go to home page.
     );
   }
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+//umsplash
+>>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f

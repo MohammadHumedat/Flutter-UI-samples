@@ -20,6 +20,7 @@ List<Article> mainSectionArticles = [
   Article(
     url:
         'https://media.istockphoto.com/id/1433432507/photo/healthy-eating-plate-with-vegan-or-vegetarian-food-in-woman-hands-healthy-plant-based-diet.webp?a=1&b=1&s=612x612&w=0&k=20&c=ZpQFw7PDna9cCLKkrVxyGQPqlc1Hy-ZWMoweYf4j8mU=',
+<<<<<<< HEAD
     content: """جيد للقلب
 يحتوي زيت الأفوكادو على أحماض دهنية غير مشبعة تساعد في تحسين صحة قلبك، يخفض ضغط الدم والكوليسترول السيئ في جسمك، يزيل السموم من الجسم، وبالتالي يحمي الأوعية الدموية.
 يعتبر زيت الأفوكادو مصدراً جيداً لمضادات الأكسدة مثل بيتا كاروتين، والليسيثين، وفيتامينات A و D و E، التي تساعد على تغذية البشرة وترطيبها، وتقليل الالتهابات، وتعزيز إنتاج الكولاجين.
@@ -40,6 +41,13 @@ List<Article> mainSectionArticles = [
     color: Color(0xFfB4cf66),
     category: 'تغذية',
     title: 'أليك عشرة فوائد صحية لزيت الأفوكادو',
+=======
+    content:
+        "زيت الافكادو وفوائده الكبيرة على الجسم ",
+    color: Color(0xFfB4cf66),
+    category: 'تغذية',
+    title: "إالبك 10 فوائد لزيت الافوكادو",
+>>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f
   ),
   Article(
     url:
