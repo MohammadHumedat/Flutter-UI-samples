@@ -21,9 +21,7 @@ class MainSectionArticle extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder:
-                      (context) => AvocadoOilArticleScreen(
-                        articleContent: articles[index],
-                      ),
+                      (context) => ArticlePage(articleContent: articles[index]),
                 ),
               );
             },

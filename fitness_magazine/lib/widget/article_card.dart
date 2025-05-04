@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_magazine/model/article.dart';
 
-
 class ArticleCard extends StatelessWidget {
   final Article mainSectionArticles;
   const ArticleCard({super.key, required this.mainSectionArticles});
