@@ -1,6 +1,9 @@
 import 'package:fitness_magazine/model/article.dart';
+<<<<<<< HEAD
+=======
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+>>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f
 
 class ArticleCard extends StatelessWidget {
   final Article mainSectionArticles;
