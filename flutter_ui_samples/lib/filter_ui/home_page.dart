@@ -11,12 +11,11 @@ class HomePage extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xFF322e59),
         body: Padding(
-          padding: const EdgeInsets.only(top: 40, left: 60),
+          padding: const EdgeInsets.only(top: 100, left: 100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -100,8 +99,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
-              CheckboxButton(),
-              SizedBox(height: 40),
+              Padding(
+                padding: const EdgeInsets.only(right: 120),
+                child: CheckboxButton(),
+              ),
+              SizedBox(height: 80),
               Container(
                 height: 40,
                 width: 220,

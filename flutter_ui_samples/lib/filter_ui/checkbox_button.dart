@@ -8,21 +8,59 @@ class CheckboxButton extends StatefulWidget {
 }
 
 class _CheckboxButtonState extends State<CheckboxButton> {
-  bool isChecked = false;
+  bool isSharedChecked = false;
+  bool isAppliedChecked = false;
+  bool isSavedChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Checkbox(
-            value: isChecked,
-            onChanged: (bool? newValue) {
-              setState(() {
-                isChecked = newValue!;
-              });
-            },
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Checkbox(
+                value: isSharedChecked,
+                onChanged: (bool? newValue) {
+                  setState(() {
+                    isSharedChecked = newValue!;
+                  });
+                },
+              ),
+              const Text('Jobs shared with me'),
+            ],
           ),
-          const Text('Jobs shared with me '),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Checkbox(
+                value: isAppliedChecked,
+                onChanged: (bool? newValue) {
+                  setState(() {
+                    isAppliedChecked = newValue!;
+                  });
+                },
+              ),
+              const Text('Jobs I applied to'),
+            ],
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Checkbox(
+                value: isSavedChecked,
+                onChanged: (bool? newValue) {
+                  setState(() {
+                    isSavedChecked = newValue!;
+                  });
+                },
+              ),
+              const Text('Jobs I saved'),
+            ],
+          ),
         ],
       ),
     );
