@@ -22,14 +22,7 @@ class MainSectionArticle extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder:
-<<<<<<< HEAD:fitness_magazine/lib/widget/main_section_article.dart
                       (context) => ArticlePage(articleContent: articles[index]),
-=======
-                      (context) => AvocadoOilArticleScreen(
-                        // return the full article after click on it, full article according to spicefic category.
-                        articleContent: articles[index],
-                      ),
->>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f:fitness_magazine/lib/screens/main_section_article.dart
                 ),
               );
             },

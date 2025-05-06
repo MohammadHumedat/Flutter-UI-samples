@@ -1,9 +1,6 @@
-import 'package:fitness_magazine/model/article.dart';
-<<<<<<< HEAD
-=======
 import 'package:flutter/material.dart';
+import 'package:fitness_magazine/model/article.dart';
 import 'package:cached_network_image/cached_network_image.dart';
->>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f
 
 class ArticleCard extends StatelessWidget {
   final Article mainSectionArticles;
@@ -25,19 +22,32 @@ class ArticleCard extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 5),
-                  child: Container(
-                    height: 180,
-                    width: 300,
-                    alignment: Alignment.topCenter,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      image: DecorationImage(
-                        alignment: Alignment.topCenter,
-                        fit: BoxFit.cover,
-                        image: NetworkImage('${mainSectionArticles.url}'),
+                  child: Hero(
+                    tag: ('${mainSectionArticles.category}'),
+                    child: CachedNetworkImage(
+                      imageUrl: ('${mainSectionArticles.url}'),
+                      width: double.infinity,
+                      height: 180,
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => Center(
+                        child: CircularProgressIndicator(),
                       ),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
                     ),
                   ),
+                  // child: Container(
+                  //   height: 180,
+                  //   width: 300,
+                  //   alignment: Alignment.topCenter,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(5),
+                  //     image: DecorationImage(
+                  //       alignment: Alignment.topCenter,
+                  //       fit: BoxFit.cover,
+                  //       image: NetworkImage('${mainSectionArticles.url}'),
+                  //     ),
+                  //   ),
+                  // ),
                 ),
                 Positioned(
                   child: Padding(

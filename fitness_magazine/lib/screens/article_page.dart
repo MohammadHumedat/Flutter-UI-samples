@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fitness_magazine/model/article.dart';
 import 'package:flutter/material.dart';
 
@@ -15,17 +16,30 @@ class ArticlePage extends StatelessWidget {
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                Container(
-                  height: 250,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage('${articleContent.url}'),
-                    ),
+                Hero(
+                  tag: ('${articleContent.category}'),
+                  child: CachedNetworkImage(
+                    imageUrl: ('${articleContent.url}'),
+                    width: double.infinity,
+                    height: 250,
+                    fit: BoxFit.cover,
+                    placeholder:
+                        (context, url) =>
+                            Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
 
+                // Container(
+                //   height: 250,
+                //   width: double.infinity,
+                //   decoration: BoxDecoration(
+                //     image: DecorationImage(
+                //       fit: BoxFit.cover,
+                //       image: NetworkImage('${articleContent.url}'),
+                //     ),
+                //   ),
+                // ),
                 Positioned(
                   top: 220,
                   left: 0,

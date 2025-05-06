@@ -32,11 +32,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-<<<<<<< HEAD
-
-
-
-=======
-//umsplash
->>>>>>> 69eb0ff51578ef29065a84398d0f734576e1f04f
