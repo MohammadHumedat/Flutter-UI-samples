@@ -83,9 +83,22 @@ class ArticlePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                IconButton(
-                  onPressed: () => Navigator.pop(context),
-                  icon: Icon(Icons.arrow_back, color: Colors.white),
+                SizedBox(height: 30),
+                Positioned(
+                  top: 25,
+                  right: 15,
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(136, 156, 154, 154),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: Icon(Icons.arrow_back, color: Colors.white),
+                    ),
+                  ),
                 ),
               ],
             ),

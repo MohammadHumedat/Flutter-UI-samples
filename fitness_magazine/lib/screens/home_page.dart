@@ -30,6 +30,16 @@ class HomePage extends StatelessWidget {
             MainSectionArticle(articles: mainSectionArticles),
             //TapBar to show the categorys of this fitness magaizne
             TabBar(
+              indicatorColor: const Color.fromARGB(255, 148, 87, 87),
+              labelColor: const Color.fromARGB(255, 180, 101, 101),
+              unselectedLabelColor: Colors.black,
+              labelStyle: const TextStyle(fontFamily: 'somar', fontSize: 15),
+              unselectedLabelStyle: const TextStyle(
+                fontFamily: 'somar',
+                fontSize: 13,
+              ),
+
+              //color
               tabs: [
                 Tab(text: 'تغذية'),
                 Tab(text: 'صحة'),

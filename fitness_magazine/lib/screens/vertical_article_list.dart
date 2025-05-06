@@ -8,7 +8,9 @@ class VerticalArticleList extends StatelessWidget {
   const VerticalArticleList({super.key, required this.articles});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+    // This ListView to build the vertical article cards that appers on the bottom of screens
+    // This is the layout structure of vertical article list.
     return ListView.builder(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
