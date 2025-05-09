@@ -11,7 +11,7 @@ Widget skillChip(String label) {
       labelStyle: const TextStyle(fontWeight: FontWeight.w500),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
-        side: BorderSide(color: const Color.fromARGB(255, 212, 195, 214)!),
+        side: BorderSide(color: const Color.fromARGB(255, 212, 195, 214)),
       ),
     ),
   );
