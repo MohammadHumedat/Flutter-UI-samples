@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_application/subscription/category.dart';
+import 'package:hotel_application/subscription/main_delivery.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -45,94 +47,20 @@ class Homepage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 15,
-                        vertical: 11,
-                      ),
-                      label: Text(
-                        'All',
-                        style: TextStyle(color: Colors.white, fontSize: 17),
-                      ),
-                      backgroundColor: Color(0xfff98602),
-                      labelStyle: const TextStyle(fontWeight: FontWeight.w500),
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        side: BorderSide(color: const Color(0xfff98602)),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 15,
-                        vertical: 11,
-                      ),
-                      label: Text(
-                        'Complete',
-                        style: TextStyle(color: Colors.black, fontSize: 17),
-                      ),
-                      backgroundColor: Colors.white,
-                      labelStyle: const TextStyle(fontWeight: FontWeight.w500),
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        side: BorderSide(
-                          color: const Color.fromARGB(255, 226, 225, 225),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 15,
-                        vertical: 11,
-                      ),
-                      label: Text(
-                        'In Delivery',
-                        style: TextStyle(color: Colors.black, fontSize: 17),
-                      ),
-                      backgroundColor: Colors.white,
-                      labelStyle: const TextStyle(fontWeight: FontWeight.w500),
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        side: BorderSide(
-                          color: const Color.fromARGB(255, 226, 225, 225),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 15,
-                        vertical: 11,
-                      ),
-                      label: Text(
-                        'In Delivery',
-                        style: TextStyle(color: Colors.black, fontSize: 17),
-                      ),
-                      backgroundColor: Colors.white,
-                      labelStyle: const TextStyle(fontWeight: FontWeight.w500),
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                        side: BorderSide(
-                          color: const Color.fromARGB(255, 226, 225, 225),
-                        ),
-                      ),
-                    ),
-                  ),
+                  Category(category: 'All', color: Colors.orange),
+                  Category(category: 'Pending', color: Colors.white),
+                  Category(category: 'Completed', color: Colors.white),
+                  Category(category: 'Cancelled', color: Colors.white),
+                  Category(category: 'In Progress', color: Colors.white),
                 ],
               ),
+            ),
+            SizedBox(height: 20),
+            MainDelivery(
+              status: 'In Delivery',
+              statusColor: Colors.orange,
+              background: Color.fromARGB(255, 33, 33, 33),
+              darkText: false,
             ),
           ],
         ),
