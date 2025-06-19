@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_application/subscription/homepage.dart';
+import 'app_lifecycle_demo/home_page.dart';
+// import 'subscription/homepage.dart';
 
 void main() {
-  runApp(Homepage());
+
+  runApp(const AppLifecycleDemo());
 }

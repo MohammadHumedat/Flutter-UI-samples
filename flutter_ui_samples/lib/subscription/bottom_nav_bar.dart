@@ -4,7 +4,7 @@ class BottomNavBar extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
 
-  BottomNavBar({required this.selectedIndex, required this.onItemTapped});
+  BottomNavBar({super.key, required this.selectedIndex, required this.onItemTapped});
 
   final List<IconData> _icons = [
     Icons.home,

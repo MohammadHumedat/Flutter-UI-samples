@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:hotel_application/subscription/details_page.dart';
 
 class MainDelivery extends StatelessWidget {
-  String status;
-  Color statusColor;
-  Color background;
+  final String status;
+  final Color statusColor;
+  final Color background;
   bool darkText = false;
 
-  MainDelivery({
+  MainDelivery({super.key, 
     required this.status,
     required this.statusColor,
     required this.background,
     this.darkText = false,
   });
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

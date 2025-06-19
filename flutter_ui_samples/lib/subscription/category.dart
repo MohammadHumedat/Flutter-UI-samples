@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Category extends StatelessWidget {
   String category;
   Color color;
-  Category({required this.category, required this.color});
+  Category({super.key, required this.category, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Category extends StatelessWidget {
       child: Chip(
         padding: EdgeInsets.symmetric(horizontal: 15, vertical: 9),
         label: Text(
-          this.category,
+          category,
           style: TextStyle(
             color: const Color.fromARGB(255, 92, 91, 91),
             fontSize: 15,
