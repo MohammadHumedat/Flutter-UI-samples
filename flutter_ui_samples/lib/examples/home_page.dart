@@ -65,3 +65,4 @@ class _AppLifecycleDisplayState extends State<AppLifecycleDisplay>
     );
   }
 }
+
