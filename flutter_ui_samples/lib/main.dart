@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'examples/app_lifecycle_demo.dart';
-import 'examples/keys_demo.dart';
-import 'slivers_ui/full_demo.dart';
+import 'examples/bloc_provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(blocProvider());
 }
-
-
