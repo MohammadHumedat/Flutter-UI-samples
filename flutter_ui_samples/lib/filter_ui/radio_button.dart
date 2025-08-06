@@ -10,7 +10,7 @@ class RadioButton extends StatefulWidget {
 }
 
 class _RadioExampleState extends State<RadioButton> {
-  Choices? _choice = Choices.choice1;
+  Choices? _choice ;
 
   @override
   Widget build(BuildContext context) {
