@@ -13,6 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
+  flutter_custom_clippers: ^2.1.0
   font_awesome_flutter: ^10.9.0
   google_fonts: ^6.3.0
 
